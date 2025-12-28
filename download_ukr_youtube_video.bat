@@ -27,12 +27,16 @@ echo Downloading...
 echo.
 
 yt-dlp -f "bv*[height<=%MAX_HEIGHT%]+ba[language=uk]/bv*[height<=%MAX_HEIGHT%]+ba/b" ^
-       -o "%DOWNLOAD_DIR%\%%(title)s.%%(ext)s" ^
+       -o "%DOWNLOAD_DIR%\%%(channel,.80)s\%%(title,.80)s.%%(ext)s" ^
        --merge-output-format mp4 ^
+       --embed-metadata ^
+       --embed-thumbnail ^
        --no-overwrites ^
        --ignore-no-formats-error ^
        --continue ^
        --progress ^
+       --windows-filenames ^
+       --compat-options filename-sanitization ^
        %URL%
 
 echo Done!
