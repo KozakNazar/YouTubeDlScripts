@@ -41,5 +41,4 @@ yt-dlp -f "bv*[height<=%MAX_HEIGHT%]+ba[language=uk]/bv*[height<=%MAX_HEIGHT%]+b
        %URL%
 
 echo Done!
-
 pause
