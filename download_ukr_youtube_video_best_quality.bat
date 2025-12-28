@@ -26,7 +26,7 @@ echo Downloading...
 echo.
 
 yt-dlp -f "bv+ba[language=uk]/bv+ba/b" ^
-       -o "%DOWNLOAD_DIR%\%%(channel,.80)s\%%(title,.80)s.%%(ext)s" ^
+       -o "%DOWNLOAD_DIR%\%%(channel,.80)s\%%(title,.80)s [%%(height)sp%%(fps)sfps].%%(ext)s" ^
        --merge-output-format mp4 ^
        --embed-metadata ^
        --embed-thumbnail ^
