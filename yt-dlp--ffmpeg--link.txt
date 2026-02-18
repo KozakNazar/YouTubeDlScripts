@@ -1,2 +1,4 @@
-yt-dlp.exe               ( https://github.com/yt-dlp/yt-dlp/releases/download/2025.12.08/yt-dlp.exe )
+yt-dlp.exe               ( https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe )
+deno.exe				 ( https://github.com/denoland/deno/releases/download/v2.6.10/deno-x86_64-pc-windows-msvc.zip )
 ffmpeg.exe + ffprobe.exe ( https://github.com/yt-dlp/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win32-gpl.zip )
+                           
