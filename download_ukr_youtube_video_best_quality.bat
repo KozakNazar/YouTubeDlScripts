@@ -25,9 +25,11 @@ if "%RAW_URL:"=%"=="%RAW_URL%" (
 echo Downloading...
 echo.
 
-yt-dlp -f "bv+ba[language=uk]/bv+ba/b" ^
+yt-dlp -f "bv+ba[language=uk]+ba[language=en]+ba[language=ru]/bv+ba[language=uk]+ba[language=us]+ba[language=ru]/bv+ba[language=uk]+ba[language=en-US]+ba[language=ru]/bv+ba[language=uk]+ba[language=en]/bv+ba[language=uk]+ba[language=us]/bv+ba[language=uk]+ba[language=en-US]/bv+ba[language=uk]+ba[language=ru]/bv+ba[language=uk]/bv+ba[language=ru]+ba[language=en]/bv+ba[language=ru]+ba[language=us]/bv+ba[language=ru]+ba[language=en-US]/bv+ba[language=en]/bv+ba[language=us]/bv+ba[language=en-US]/bv+ba/b" ^
        -o "%DOWNLOAD_DIR%\%%(channel,.80)s\%%(title,.80)s [%%(format_note)s].%%(ext)s" ^
        --merge-output-format mp4 ^
+       --audio-multistreams ^
+	   --extractor-args "youtube:player_client=all" ^
        --embed-metadata ^
        --embed-thumbnail ^
        --no-overwrites ^

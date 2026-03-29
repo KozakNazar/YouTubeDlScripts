@@ -26,9 +26,11 @@ if "%RAW_URL:"=%"=="%RAW_URL%" (
 echo Downloading...
 echo.
 
-yt-dlp -f "bv*[height<=%MAX_HEIGHT%]+ba[language=uk]/bv*[height<=%MAX_HEIGHT%]+ba/b" ^
+yt-dlp -f "bv*[height<=%MAX_HEIGHT%]+ba[language=uk]+ba[language=en]+ba[language=ru]/bv*[height<=%MAX_HEIGHT%]+ba[language=uk]+ba[language=us]+ba[language=ru]/bv*[height<=%MAX_HEIGHT%]+ba[language=uk]+ba[language=en-US]+ba[language=ru]/bv*[height<=%MAX_HEIGHT%]+ba[language=uk]+ba[language=en]/bv*[height<=%MAX_HEIGHT%]+ba[language=uk]+ba[language=us]/bv*[height<=%MAX_HEIGHT%]+ba[language=uk]+ba[language=en-US]/bv*[height<=%MAX_HEIGHT%]+ba[language=uk]+ba[language=ru]/bv*[height<=%MAX_HEIGHT%]+ba[language=uk]/bv*[height<=%MAX_HEIGHT%]+ba[language=ru]+ba[language=en]/bv*[height<=%MAX_HEIGHT%]+ba[language=ru]+ba[language=us]/bv*[height<=%MAX_HEIGHT%]+ba[language=ru]+ba[language=en-US]/bv*[height<=%MAX_HEIGHT%]+ba[language=en]/bv*[height<=%MAX_HEIGHT%]+ba[language=us]/bv*[height<=%MAX_HEIGHT%]+ba[language=en-US]/bv*[height<=%MAX_HEIGHT%]+ba/b" ^
        -o "%DOWNLOAD_DIR%\%%(channel,.80)s\%%(playlist_title,.80|)s\%%(playlist_index|)s%%(playlist_index& - |)s%%(title,.80)s [%%(format_note)s].%%(ext)s" ^
        --merge-output-format mp4 ^
+       --audio-multistreams ^
+	   --extractor-args "youtube:player_client=all" ^
        --embed-metadata ^
        --embed-thumbnail ^
        --no-overwrites ^
